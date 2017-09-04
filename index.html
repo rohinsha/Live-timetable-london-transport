@@ -2,106 +2,99 @@
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
-    font-awesome/4.7.0/css/font-awesome.min.css">
-
   </head>
   <body>
   	<h2 class="text-center">Google Maps for Geolocation</h2>
     <div id="map"></div>
     <hr />
-
-	<h2 class="text-center">Timetable of London Buses</h2>
-
-	<form>
-		<div class="co-ordinates-block text-center">
-			<div class="row">
-      	<div class="col-xs-12 col-sm-4 hi">
-        	<label for="latitude">LATITUDE:</label>
-        	<input name="latitude" id="latitude" type="text" placeholder="51.6060985"/>
- 		    </div>
-   		  <div class="col-xs-12 col-sm-4 hi">
-        	<label for="longitude">LONGITUDE:</label>
-        	<input name="longitude" id="longitude" type="text" placeholder="-0.0904692" /> 
-		    </div>
-		    <div class="col-xs-12 col-sm-4 hi">
-        	<label for="postcode">POSTCODE:</label>
-        	<input name="postcode" id="postcode" type="text" placeholder="n225qw" /> 
-		    </div>
-			</div>
-		</div>
-    <div class="container">
+    <h2 class="text-center">Timetable of London Buses</h2>
+    <form>
+  		<div class="co-ordinates-block text-center">
+  			<div class="row">
+        	<div class="col-xs-12 col-sm-4 user-input">
+          	<label for="latitude">LATITUDE:</label>
+          	<input name="latitude" id="latitude" type="text" placeholder="51.6060985"/>
+   		    </div>
+     		  <div class="col-xs-12 col-sm-4 user-input">
+          	<label for="longitude">LONGITUDE:</label>
+          	<input name="longitude" id="longitude" type="text" placeholder="-0.0904692" /> 
+  		    </div>
+  		    <div class="col-xs-12 col-sm-4 user-input">
+          	<label for="postcode">POSTCODE:</label>
+          	<input name="postcode" id="postcode" type="text" placeholder="n225qw" /> 
+  		    </div>
+  			</div>
+  		</div>
+      <div class="container">
+        <div class="row chart">
+          <table>
+            <thead>
+              <tr>
+                <td>Latitude</td>
+                <td>Longitude</td>
+                <td>Postcode</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>51.5970483</td>
+                <td>-0.1111422</td>
+                <td>se171jl</td>
+              </tr>
+              <tr>
+                <td>51.5386915</td>
+                <td>-0.1910752</td>
+                <td>w127gf</td>
+              </tr>
+              <tr>
+                <td>51.6165119</td>
+                <td>-0.1597954 </td>
+                <td>n102ds</td>
+              </tr>
+              <tr>
+                <td>51.4800483</td>
+                <td>-0.2691437</td>
+                <td>w42qn</td>
+              </tr>
+              <tr>
+                <td>51.5390531</td>
+                <td>-0.1930121</td>
+                <td>n103hu</td>
+              </tr>
+              <tr>
+                <td>51.5368879</td>
+                <td>-0.2913728</td>
+                <td>sw109nh</td>
+              </tr>
+              <tr>
+                <td>51.5467236</td>
+                <td>-0.2871149</td>
+                <td>n113pw</td>
+              </tr>
+              <tr>
+                <td>51.5308831</td>
+                <td>-0.1923074</td>
+                <td>se120tx</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  	  </div>
       
-      <div class="row chart">
-        <table>
-          <thead>
-            <tr>
-              <td>Latitude</td>
-              <td>Longitude</td>
-              <td>Postcode</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>51.5970483</td>
-              <td>-0.1111422</td>
-              <td>se171jl</td>
-            </tr>
-            <tr>
-              <td>51.5386915</td>
-              <td>-0.1910752</td>
-              <td>w127gf</td>
-            </tr>
-            <tr>
-              <td>51.6165119</td>
-              <td>-0.1597954 </td>
-              <td>n102ds</td>
-            </tr>
-            <tr>
-              <td>51.4800483</td>
-              <td>-0.2691437</td>
-              <td>w42qn</td>
-            </tr>
-            <tr>
-              <td>51.5390531</td>
-              <td>-0.1930121</td>
-              <td>n103hu</td>
-            </tr>
-            <tr>
-              <td>51.5368879</td>
-              <td>-0.2913728</td>
-              <td>sw109nh</td>
-            </tr>
-            <tr>
-              <td>51.5467236</td>
-              <td>-0.2871149</td>
-              <td>n113pw</td>
-            </tr>
-            <tr>
-              <td>51.5308831</td>
-              <td>-0.1923074</td>
-              <td>se120tx</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-	  </div>
-    
-   <h4 class="text-left postcode-list"><a href="http://www.londontown.com/LondonPC/Postcodes/ZipCodes/Information/N22/?s=80&search=" target="_blank">You can check for the postcodes on this link</a></h4>
-  <button class="search left-block" id="search">Search for the route</button>
-  <p class="success-alert"></p>
+     <h4 class="text-left postcode-list"><a href="http://www.londontown.com/LondonPC/Postcodes/ZipCodes/Information/N22/?s=80&search=" target="_blank">You can check for the postcodes on this link</a></h4>
+    <button class="search left-block" id="search">Search for the route</button>
+    <p class="success-alert"></p>
 	</form>
 	
 
 	<div class="modes text-center">
-      <ul class="nav nav-tabs modes-list">
-        <li>Select the type of mode :-</li>
-        <li><a  class="walking" data-toggle="tab" href="#walking"><img src="https://png.icons8.com/walking/color/24" title="Walking" width="44" height="44"></a></li>
-    		<li><a  class="bus" data-toggle="tab" href="#bus"><img src="https://png.icons8.com/bus/dusk/64" title="Bus" width="44" height="44"></a></li>
-    		<li><a class="rail" data-toggle="tab" href="#rail"><img src="https://png.icons8.com/train/nolan/64" title="Train" width="54" height="54"></a></li>
-    		<li><a  class="tube" data-toggle="tab" href="#tube"><img src="https://png.icons8.com/train/dusk/64" title="Train" width="44" height="44"></a></li>
-      </ul>
+    <ul class="nav nav-tabs modes-list">
+      <li>Select the type of mode :-</li>
+      <li><a  class="walking" data-toggle="tab" href="#walking"><img src="https://png.icons8.com/walking/color/24" title="Walking" width="44" height="44"></a></li>
+  		<li><a  class="bus" data-toggle="tab" href="#bus"><img src="https://png.icons8.com/bus/dusk/64" title="Bus" width="44" height="44"></a></li>
+  		<li><a class="rail" data-toggle="tab" href="#rail"><img src="https://png.icons8.com/train/nolan/64" title="Train" width="54" height="54"></a></li>
+  		<li><a  class="tube" data-toggle="tab" href="#tube"><img src="https://png.icons8.com/train/dusk/64" title="Train" width="44" height="44"></a></li>
+    </ul>
 	</div>
     <div class="tab-content">
       <div id="walking" class="tab-pane fade in">
@@ -191,58 +184,15 @@
    
       </div>
     </div>
-
-
-  <h2 class="msg text-center"></h2>
+    <h2 class="msg text-center"></h2>
  
-    <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 51.5059311, lng: -0.0754023},
-          zoom: 7
-        });
-        infoWindow = new google.maps.InfoWindow;
-
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindaow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-    </script>
-    <script src="js/jquery.js"></script>
+  <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src ="js/custom.js"></script>
-	 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRs5UPyHGI84OBSYX3AAS7rzT0eXJFCfc&callback=initMap">
-    </script>
+  <script src="js/map.js"></script>
+	<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRs5UPyHGI84OBSYX3AAS7rzT0eXJFCfc&callback=initMap">
+  </script>
 	
 </body>
 </html>
